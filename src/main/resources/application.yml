@@ -1,0 +1,5 @@
+amazonProperties:
+  endpointUrl: https://s3.us-east-2.amazonaws.com
+  accessKey: AKIA3CELUJO2L2UYOMAQ
+  secretKey: 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
+  bucketName: lungisa-s3
