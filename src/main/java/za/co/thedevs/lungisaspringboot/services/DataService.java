@@ -34,6 +34,7 @@ public class DataService {
         data.setImageUrl(imageURL);
         data.setIssue(flutterData.getIssue());
         data.setDatetime(flutterData.getDatetime());
+        data.setLocation(flutterData.getLocation());
 
         save(data);
     }

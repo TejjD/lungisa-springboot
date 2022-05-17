@@ -28,6 +28,17 @@ public class Data {
     @Column(name = "comment", length = 45)
     private String comment;
 
+    @Column(name = "location", length = 45)
+    private String location;
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     public Integer getId() {
         return id;
     }
