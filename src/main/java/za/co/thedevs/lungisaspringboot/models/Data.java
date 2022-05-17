@@ -2,16 +2,14 @@ package za.co.thedevs.lungisaspringboot.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Table(name = "data")
 public class Data {
     @Id
+    @GeneratedValue
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -26,9 +24,6 @@ public class Data {
 
     @Column(name = "image_url")
     private String imageUrl;
-
-    @Column(name = "datacol", length = 45)
-    private String datacol;
 
     @Column(name = "comment", length = 45)
     private String comment;
@@ -71,14 +66,6 @@ public class Data {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public String getDatacol() {
-        return datacol;
-    }
-
-    public void setDatacol(String datacol) {
-        this.datacol = datacol;
     }
 
     public String getComment() {
